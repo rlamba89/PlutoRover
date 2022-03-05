@@ -6,7 +6,6 @@ namespace Rover.Domain
 {
     public class PlutoRover
     {
-        //public CardinalPoints _cadinalDirection;
         public IDirection _direction;
         private readonly IEnumerable<IRoverMovementBehaviour> _roverMovementHandler;
 
@@ -15,8 +14,6 @@ namespace Rover.Domain
         public PlutoRover(IEnumerable<IRoverMovementBehaviour> roverMovementHandler, ICardinalPoints cardinalPoints, IDirection direction)
         {
             _cardinalPoints = cardinalPoints;
-            //_cadinalDirection = new CardinalPoints(0, 0, 100, 100);
-            //_direction = new North(_cardinalPoints);
             _direction = direction;
             _roverMovementHandler = roverMovementHandler;
         }
